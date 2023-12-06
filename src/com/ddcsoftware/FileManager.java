@@ -8,9 +8,9 @@ import java.nio.file.Paths;
 
 public class FileManager {
 
-    private final static String CUBE_NAME = "cube.png";
+    private final static String BLOCK_NAME = "cube.png";
 
-    public final static char CUBE = 'c';
+    public final static char BLOCK = 'c';
     public final static char EMPTY = ' ';
 
     public static String[] getDirectories(String dir) {
@@ -31,8 +31,8 @@ public class FileManager {
     private static char getCharacterFromPath(Path path) {
         String p = path.getFileName().toString();
         char c = '0';
-        if (p.equals(CUBE_NAME)) {
-            c = CUBE;
+        if (p.equals(BLOCK_NAME)) {
+            c = BLOCK;
         }
         return c;
     }

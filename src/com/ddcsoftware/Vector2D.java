@@ -9,7 +9,7 @@ public class Vector2D {
         this.x = x;
     }
 
-    public Vector2D substract(int y, int x) {
+    public Vector2D subtract(int y, int x) {
         return new Vector2D(this.y - y, this.x - x);
     }
 

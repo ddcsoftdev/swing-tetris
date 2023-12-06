@@ -43,13 +43,13 @@ public class Renderer extends Canvas {
 
             for (int x = 0; x < dimension.x; x += TILE_OFFSET) {
                 if (x == 0 || x == dimension.x - TILE_OFFSET) {
-                    Image i = images.get(FileManager.CUBE);
+                    Image i = images.get(FileManager.BLOCK);
                     g.drawImage(i, x, y, TILE_OFFSET, TILE_OFFSET, this);
                 } else if (y == dimension.y - TILE_OFFSET) {
-                    Image i = images.get(FileManager.CUBE);
+                    Image i = images.get(FileManager.BLOCK);
                     g.drawImage(i, x, y, TILE_OFFSET, TILE_OFFSET, this);
-                } else if (map.getMap()[y][x] == FileManager.CUBE) {
-                    Image i = images.get(FileManager.CUBE);
+                } else if (map.getMap()[y][x] == FileManager.BLOCK) {
+                    Image i = images.get(FileManager.BLOCK);
                     g.drawImage(i, x, y, TILE_OFFSET, TILE_OFFSET, this);
                 }
             }

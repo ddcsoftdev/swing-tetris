@@ -1,7 +1,5 @@
 package com.ddcsoftware;
 
-import java.util.Vector;
-
 public class Map {
     private char[][] map;
     private final Vector2D dimension;
@@ -40,11 +38,10 @@ public class Map {
         int x = blockLocation.x;
         if (isInRange(blockLocation)) {
             if (y < getDimension().y - tileSize) {
-                setTile(blockLocation, FileManager.CUBE);
+                setTile(blockLocation, FileManager.BLOCK);
 
                 if (y >= tileSize) {
-                    setTile(blockLocation.substract(tileSize, 0), FileManager.EMPTY);
-                    return map[y + tileSize][x] != FileManager.CUBE;
+                    return map[y + tileSize][x] != FileManager.BLOCK;
                 }
             } else {
                 return false;
